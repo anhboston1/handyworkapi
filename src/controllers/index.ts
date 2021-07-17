@@ -25,3 +25,6 @@ export * from './chat-conversation.controller';
 export * from './chat-message.controller';
 export * from './chat-conversation-chat-message.controller';
 export * from './chat-message-chat-conversation.controller';
+export * from './user-chat-conversation-controller.controller';
+export * from './user-user-chat-conversation.controller';
+export * from './user-chat-conversation-user.controller';

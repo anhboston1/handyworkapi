@@ -6,3 +6,4 @@ export * from './projectaward.model';
 export * from './projectquestion.model';
 export * from './chat-conversation.model';
 export * from './chat-message.model';
+export * from './user-chat-conversation.model';

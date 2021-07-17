@@ -3,6 +3,7 @@ import {Project} from './project.model';
 import {Projectbid} from './projectbid.model';
 import {Projectaward} from './projectaward.model';
 import {Projectquestion} from './projectquestion.model';
+import {UserChatConversation} from './user-chat-conversation.model';
 
 @model()
 export class User extends Entity {
@@ -53,6 +54,9 @@ export class User extends Entity {
 
   @hasMany(() => Projectquestion)
   projectquestions: Projectquestion[];
+
+  @hasMany(() => UserChatConversation)
+  userChatConversations: UserChatConversation[];
 
   constructor(data?: Partial<User>) {
     super(data);

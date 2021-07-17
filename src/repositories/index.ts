@@ -6,3 +6,4 @@ export * from './projectaward.repository';
 export * from './projectquestion.repository';
 export * from './chat-conversation.repository';
 export * from './chat-message.repository';
+export * from './user-chat-conversation.repository';

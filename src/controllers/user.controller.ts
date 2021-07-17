@@ -33,7 +33,7 @@ export class UserController {
 
   ) {}
 
-  @post('/signup', {
+  @post('/users/signup', {
     responses: {
       '200': {
         description: 'User',
@@ -51,7 +51,7 @@ export class UserController {
     return savedUser;
   }
 
-  @post('/login', {
+  @post('/users/login', {
     responses: {
       '200': {
         description: 'Token',

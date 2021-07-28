@@ -49,7 +49,7 @@ export class Project extends Entity {
     type: 'string',
     required: true,
   })
-  skills: string;
+  service_category: string;
 
   @property({
     type: 'number',
@@ -60,6 +60,26 @@ export class Project extends Entity {
     type: 'number',
   })
   latitude?: number;
+
+  @property({
+    type: 'string',
+  })
+  street?: string;
+
+  @property({
+    type: 'string',
+  })
+  city?: string;
+
+  @property({
+    type: 'string',
+  })
+  zipcode?: string;
+
+  @property({
+    type: 'string',
+  })
+  county?: string;
 
   @belongsTo(() => User)
   userId: string;

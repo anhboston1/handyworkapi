@@ -1,7 +1,7 @@
 import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
-const config = {
+/* const config = {
   name: 'db',
   connector: 'mysql',
   url: '',
@@ -10,7 +10,20 @@ const config = {
   user: "dbuser",
   password: "12345678",
   database: 'handywork'
+}; */
+
+const config = {
+  name: 'db',
+  connector: 'mysql',
+  url: '',
+  host: 'localhost',
+  port: 3306,
+  user: "phuong",
+  password: "password",
+  database: 'handywork'
 };
+//MYsql issue
+//https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
 
 // Observe application's life cycle to disconnect the datasource when
 // application is stopped. This allows the application to be shut down

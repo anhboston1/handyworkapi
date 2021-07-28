@@ -13,6 +13,19 @@ import {JWTService} from '../services/jwt-service';
 import {MyUserService} from '../services/user-service';
 import {OPERATION_SECURITY_SPEC} from '../utils/security-spec';
 
+import {
+  del,
+  getModelSchemaRef,
+  getWhereSchemaFor,
+  HttpErrors,
+  param,
+  patch,
+  Request,
+  response,
+  Response,
+  RestBindings
+} from '@loopback/rest';
+
 
 export class UserController {
   constructor(
@@ -83,6 +96,19 @@ export class UserController {
     return Promise.resolve({token: token})
   }
 
+  @post('/users/logout', {
+    responses: {
+      '204': {
+        description: 'User Logged Out',
+      },
+    },
+  })
+  async logout(
+    @inject(RestBindings.Http.REQUEST) req: Request,
+    @inject(RestBindings.Http.RESPONSE) res: Response,
+  ): Promise<void> {
+    return;
+  }
 
   @authenticate("jwt")
   @get('/users/me', {

@@ -23,10 +23,14 @@ export class Projectbid extends Entity {
   price: number;
 
   @property({
-    type: 'date',
-    required: true,
+    type: 'number'
   })
-  datebid: string;
+  daysToComplete?: number;
+
+  @property({
+    type: 'date',
+  })
+  datebid?: string;
 
   @property({
     type: 'string',
